@@ -1,11 +1,8 @@
-# FairMOT
+# ST-track
 A simple baseline for one-shot multi-object tracking:
-![](assets/pipeline.png)
-> [**A Simple Baseline for Multi-Object Tracking**](http://arxiv.org/abs/2004.01888),            
-> Yifu Zhang, Chunyu Wang, Xinggang Wang, Wenjun Zeng, Wenyu Liu,        
-> *arXiv technical report ([arXiv 2004.01888](http://arxiv.org/abs/2004.01888))*
+![](assets/pipeline.png)    
 ## Abstract
-There has been remarkable progress on object detection and re-identification in recent years which are the core components for multi-object tracking. However, little attention has been focused on accomplishing the two tasks in a single network to improve the inference speed. The initial attempts along this path ended up with degraded results mainly because the re-identification branch is not appropriately learned. In this work, we study the essential reasons behind the failure, and accordingly present a simple baseline to addresses the problems. It remarkably outperforms the state-of-the-arts on the MOT challenge datasets at 30 FPS. We hope this baseline could inspire and help evaluate new ideas in this field.
+With the popularity of drone technology, object detection and tracking in aerial images have been widely studied. There arise some new challenges in the outdoor large-scale scenarios, such as weak appearance, small object, etc. This paper proposes a Spatio-Temporal Feature Aggregation (STFA) module for multiple ship tracking in aerial images. The module aggregates both the spatial and temporal contexts of objects to counter dynamic interference from external scenarios. Also, a joint detection and tracking framework integrating STFA module is developed. To illustrate its performance, a specialized dataset collected by drones during maritime surveillance missions as well as the public dataset VisDrone2019 is utilized in this work. Comprehensive experiments are conducted, an IDF1 score of 92.0% and a MOTA score of 84.6% is achieved on the specialized dataset while the MOTA score has increased by 1.3% on VisDrone2019 dataset. It can be seen that the STFA based tracker is beneficial to the operation of drones in real environments.
 
 ## Tracking performance
 ### Results on MOT challenge test set
@@ -15,8 +12,21 @@ There has been remarkable progress on object detection and re-identification in 
 |MOT16       | 68.7 | 70.4 | 953 | 39.5% | 19.0% | 25.9 |
 |MOT17       | 67.5 | 69.8 | 2868 | 37.7% | 20.8% | 25.9 |
 |MOT20       | 58.7 | 63.7 | 6013 | 66.3% | 8.5% | 13.2 |
-
- All of the results are obtained on the [MOT challenge](https://motchallenge.net) evaluation server under the “private detector” protocol. We rank first among all the trackers on 2DMOT15, MOT17 and the recently released (2020.02.29) MOT20. Note that our IDF1 score remarkably outperforms other one-shot MOT trackers by more than **10 points**. The tracking speed of the entire system can reach up to **30 FPS**.
+Table 1. Results on the development dataset. The best results are shown in bold.
+Method	MOTA↑	IDF1↑	MOTP↑	FP↓	FN↓	FM↓
+SORT[26]	63.4	83.8	70.3	645	105	38
+DeepSORT[27]	78.4	88.4	66.1	82	361	27
+UAVMOT[28]	66.4	85.1	69.1	606	77	52
+FairMOT[29]	76.5	87.9	68.1	177	304	24
+ours	84.6	92.0	67.8	83	233	31
+Table 2. Results on the Visdrone2019 test development dataset. The best results are shown in bold.
+Method	MOTA↑	IDF1↑	MOTP↑	FN↓	FM↓	IDs↓
+SORT	14.0	38.0	73.2	112954	3629	4838
+MOTDT[30]	-0.8	21.6	68.5	185453	1437	3609
+TrackFormer[31]	25.0	30.5	73.9	141526	4840	4855
+MOTR[32]	22.8	41.4	72.8	147937	959	3980
+FairMOT	26.3	47.3	61.9	133961	6113	3670
+Ours	27.6	48.8	63.4	123928	7043	3946
 
 ### Video demos on MOT challenge test set
 <img src="assets/MOT15.gif" width="400"/>   <img src="assets/MOT16.gif" width="400"/>
