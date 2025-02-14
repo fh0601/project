@@ -1,6 +1,6 @@
 # ST-track
 A simple baseline for one-shot multi-object tracking:
-![](assets/pipeline.png)    
+![](pipeline.png)    
 ## Abstract
 With the popularity of drone technology, object detection and tracking in aerial images have been widely studied. There arise some new challenges in the outdoor large-scale scenarios, such as weak appearance, small object, etc. This paper proposes a Spatio-Temporal Feature Aggregation (STFA) module for multiple ship tracking in aerial images. The module aggregates both the spatial and temporal contexts of objects to counter dynamic interference from external scenarios. Also, a joint detection and tracking framework integrating STFA module is developed. To illustrate its performance, a specialized dataset collected by drones during maritime surveillance missions as well as the public dataset VisDrone2019 is utilized in this work. Comprehensive experiments are conducted, an IDF1 score of 92.0% and a MOTA score of 84.6% is achieved on the specialized dataset while the MOTA score has increased by 1.3% on VisDrone2019 dataset. It can be seen that the STFA based tracker is beneficial to the operation of drones in real environments.
 
