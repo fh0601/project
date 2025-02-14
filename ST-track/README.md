@@ -1,42 +1,26 @@
 # ST-track
 The basic architecture of ST-track and the structure of STFA module:
-![](pipeline.png)    
+  ![structure](https://github.com/user-attachments/assets/68f3873b-a56c-458e-b52e-33b1f651f24f)
 ## Abstract
 With the popularity of drone technology, object detection and tracking in aerial images have been widely studied. There arise some new challenges in the outdoor large-scale scenarios, such as weak appearance, small object, etc. This paper proposes a Spatio-Temporal Feature Aggregation (STFA) module for multiple ship tracking in aerial images. The module aggregates both the spatial and temporal contexts of objects to counter dynamic interference from external scenarios. Also, a joint detection and tracking framework integrating STFA module is developed. To illustrate its performance, a specialized dataset collected by drones during maritime surveillance missions as well as the public dataset VisDrone2019 is utilized in this work. Comprehensive experiments are conducted, an IDF1 score of 92.0% and a MOTA score of 84.6% is achieved on the specialized dataset while the MOTA score has increased by 1.3% on VisDrone2019 dataset. It can be seen that the STFA based tracker is beneficial to the operation of drones in real environments.
 
 ## Tracking performance
 ### Table 1. Results on the development dataset.
-| Method    |  MOTA↑ | IDF1↑ | MOTP↑ | FP↓ | FN↓ | FM↓ |
-|--------------|-----------|--------|-------|----------|----------|--------|
-|SORT   | 63.4 | 83.8 |  70.3 | 645 | 105 | 38 |
-|DeepSORT  | 68.7 | 70.4 | 953 | 39.5% | 19.0% | 25.9 |
-|UAVMOT       | 67.5 | 69.8 | 2868 | 37.7% | 20.8% | 25.9 |
-|FairMOT       | 58.7 | 63.7 | 6013 | 66.3% | 8.5% | 13.2 |
-|ours  | 59.0 | 62.2 |  582 | 45.6% | 11.5% | 30.5 |
-### Table 2. Results on the Visdrone2019 test development dataset.
-|SORT       | 68.7 | 70.4 | 953 | 39.5% | 19.0% | 25.9 |
-|MOTDT       | 67.5 | 69.8 | 2868 | 37.7% | 20.8% | 25.9 |
-|TrackFormer       | 58.7 | 63.7 | 6013 | 66.3% | 8.5% | 13.2 |
-|MOTR       | 58.7 | 63.7 | 6013 | 66.3% | 8.5% | 13.2 |
-|FairMOT       | 58.7 | 63.7 | 6013 | 66.3% | 8.5% | 13.2 |
-|Ours       | 58.7 | 63.7 | 6013 | 66.3% | 8.5% | 13.2 |
-### Table 2. Results on the Visdrone2019 test development dataset.
-Method	MOTA↑	IDF1↑	MOTP↑	FP↓	FN↓	FM↓
-SORT[26]	63.4	83.8	70.3	645	105	38
-DeepSORT[27]	78.4	88.4	66.1	82	361	27
-UAVMOT[28]	66.4	85.1	69.1	606	77	52
-FairMOT[29]	76.5	87.9	68.1	177	304	24
-ours	84.6	92.0	67.8	83	233	31
-Table 2. Results on the Visdrone2019 test development dataset. The best results are shown in bold.
-Method	MOTA↑	IDF1↑	MOTP↑	FN↓	FM↓	IDs↓
-SORT	14.0	38.0	73.2	112954	3629	4838
-MOTDT[30]	-0.8	21.6	68.5	185453	1437	3609
-TrackFormer[31]	25.0	30.5	73.9	141526	4840	4855
-MOTR[32]	22.8	41.4	72.8	147937	959	3980
-FairMOT	26.3	47.3	61.9	133961	6113	3670
-Ours	27.6	48.8	63.4	123928	7043	3946
-![image](https://github.com/user-attachments/assets/160684c7-1e8b-4d4d-83c9-e9068d79e8e7)
+|Method|	MOTA↑|	|IDF1↑|	|MOTP↑|	|FP↓|	FN↓|	|FM↓|
+|SORT|	|63.4|	|83.8|	|70.3||	645||	105||	38|
+|DeepSORT|	|78.4	||88.4	||66.1	||82	||361	||27|
+|UAVMOT|	|66.4||	85.1	||69.1||	606	||77||	52|
+|FairMOT|	|76.5||	87.9||	68.1||	177||	304	||24|
+|ours|	|84.6	||92.0||67.8||	83||	233	||31|
 
+### Table 2. Results on the Visdrone2019 test development dataset.
+|Method||	MOTA↑	||IDF1↑	||MOTP↑||	FN↓||	FM↓	||IDs↓|
+|SORT|	|14.0||	38.0||	73.2|||	112954||	3629||	4838|
+|MOTDT|	|-0.8	||21.6||	68.5||	185453|	1437	||3609|
+|TrackFormer|	|25.0	||30.5||	73.9	||141526||	4840	||4855|
+|MOTR	||22.8	||41.4	||72.8	||147937||	959||	3980|
+|FairMOT|	|26.3	||47.3	||61.9	||133961	||6113	||3670|
+|Ours|	|27.6||	48.8	||63.4||	123928	||7043||	3946|
 
 ### Video demos on MOT challenge test set
 <img src="assets/MOT15.gif" width="400"/>   <img src="assets/MOT16.gif" width="400"/>
