@@ -24,17 +24,13 @@ With the popularity of drone technology, object detection and tracking in aerial
 |FairMOT	|26.3	|47.3	|61.9	|133961	|6113	|3670|
 |Ours	|27.6|	48.8	|63.4|	123928	|7043|	3946|
 
-### Video demos on MOT challenge test set
-<img src="assets/MOT15.gif" width="400"/>   <img src="assets/MOT16.gif" width="400"/>
-<img src="assets/MOT17.gif" width="400"/>   <img src="assets/MOT20.gif" width="400"/>
-
 
 ## Installation
-* Clone this repo, and we'll call the directory that you cloned as ${FAIRMOT_ROOT}
+* Clone this repo, and we'll call the directory that you cloned as ${ST_track_ROOT}
 * Install dependencies. We use python 3.7 and pytorch >= 1.2.0
 ```
-conda create -n FairMOT
-conda activate FairMOT
+conda create -n ST_track
+conda activate ST_track
 conda install pytorch==1.2.0 torchvision==0.4.0 cudatoolkit=10.0 -c pytorch
 cd ${FAIRMOT_ROOT}
 pip install -r requirements.txt
