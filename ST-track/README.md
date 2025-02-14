@@ -6,21 +6,23 @@ With the popularity of drone technology, object detection and tracking in aerial
 
 ## Tracking performance
 ### Table 1. Results on the development dataset.
-|Method|	MOTA↑|	|IDF1↑|	|MOTP↑|	|FP↓|	FN↓|	|FM↓|
-|SORT|	|63.4|	|83.8|	|70.3||	645||	105||	38|
-|DeepSORT|	|78.4	||88.4	||66.1	||82	||361	||27|
-|UAVMOT|	|66.4||	85.1	||69.1||	606	||77||	52|
-|FairMOT|	|76.5||	87.9||	68.1||	177||	304	||24|
-|ours|	|84.6	||92.0||67.8||	83||	233	||31|
+|Method|	MOTA↑|	IDF1↑|	MOTP↑	|FP↓|	FN↓	|FM↓|
+|-------|-------|-------|-------|-------|-------|-------|
+|SORT	|63.4	|83.8	|70.3|	645|	105|	38|
+|DeepSORT	|78.4	|88.4	|66.1	|82	|361	|27|
+|UAVMOT	|66.4|	85.1	|69.1|	606	|77|	52|
+|FairMOT	|76.5|	87.9|	68.1|	177|	304	||24|
+|ours	|84.6	|92.0|67.8|	83|	233	|31|
 
 ### Table 2. Results on the Visdrone2019 test development dataset.
-|Method||	MOTA↑	||IDF1↑	||MOTP↑||	FN↓||	FM↓	||IDs↓|
-|SORT|	|14.0||	38.0||	73.2|||	112954||	3629||	4838|
-|MOTDT|	|-0.8	||21.6||	68.5||	185453|	1437	||3609|
-|TrackFormer|	|25.0	||30.5||	73.9	||141526||	4840	||4855|
-|MOTR	||22.8	||41.4	||72.8	||147937||	959||	3980|
-|FairMOT|	|26.3	||47.3	||61.9	||133961	||6113	||3670|
-|Ours|	|27.6||	48.8	||63.4||	123928	||7043||	3946|
+|Method|	MOTA↑	|IDF1↑	|MOTP↑|	FN↓|	FM↓	|IDs↓|
+|-------|-------|-------|-------|-------|-------|-------|
+|SORT	|14.0|	38.0|	73.2|	112954|	3629|	4838|
+|MOTDT|-0.8	|21.6|	68.5|	185453|	1437	|3609|
+|TrackFormer	|25.0	||30.5|	73.9	|141526|	4840	|4855|
+|MOTR	|22.8	|41.4	|72.8	|147937|	959|	3980|
+|FairMOT	|26.3	|47.3	|61.9	|133961	|6113	|3670|
+|Ours	|27.6|	48.8	|63.4|	123928	|7043|	3946|
 
 ### Video demos on MOT challenge test set
 <img src="assets/MOT15.gif" width="400"/>   <img src="assets/MOT16.gif" width="400"/>
