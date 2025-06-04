@@ -41,7 +41,7 @@ cd src/lib/models/networks/DCNv2_new sh make.sh
 
 ## Data preparation
 
-We use the same training data as [JDE](https://github.com/Zhongdao/Towards-Realtime-MOT). Please refer to their [DATA ZOO](https://github.com/Zhongdao/Towards-Realtime-MOT/blob/master/DATASET_ZOO.md) to download and prepare all the training data including Caltech Pedestrian, CityPersons, CUHK-SYSU, PRW, ETHZ, MOT17 and MOT16. 
+We use the same training data as [JDE](https://github.com/Zhongdao/Towards-Realtime-MOT). Please refer to their [DATA ZOO](https://github.com/Zhongdao/Towards-Realtime-MOT/blob/master/DATASET_ZOO.md) to download and prepare all the training data including Caltech Pedestrian, CityPersons, CUHK-SYSU, PRW, ETHZ, MOT17, MOT16 and Visdrone2019. 
 
 [2DMOT15](https://motchallenge.net/data/2D_MOT_2015/) and [MOT20](https://motchallenge.net/data/MOT20/) can be downloaded from the official webpage of MOT challenge. After downloading, you should prepare the data in the following structure:
 ```
@@ -73,7 +73,7 @@ DLA-34 COCO pretrained model: [DLA-34 official](https://drive.google.com/file/d/
 HRNetV2 ImageNet pretrained model: [HRNetV2-W18 official](https://1drv.ms/u/s!Aus8VCZ_C_33cMkPimlmClRvmpw), [HRNetV2-W32 official](https://1drv.ms/u/s!Aus8VCZ_C_33dYBMemi9xOUFR0w).
 After downloading, you should put the pretrained models in the following structure:
 ```
-${FAIRMOT_ROOT}
+${STtrack_ROOT}
    └——————models
            └——————ctdet_coco_dla_2x.pth
            └——————hrnetv2_w32_imagenet_pretrained.pth
@@ -81,10 +81,10 @@ ${FAIRMOT_ROOT}
 ```
 * **Baseline model**
 
-Our baseline FairMOT model can be downloaded here: DLA-34: [[Google]](https://drive.google.com/open?id=1udpOPum8fJdoEQm6n0jsIgMMViOMFinu) [[Baidu, code: 88yn]](https://pan.baidu.com/s/1YQGulGblw_hrfvwiO6MIvA). HRNetV2_W18: [[Google]](https://drive.google.com/open?id=182EHCOSzVVopvAqAXN5o6XHX4PEyLjZT) [[Baidu, code: z4ft]](https://pan.baidu.com/s/1h1qwn8dyJmKj_nZi5H3NAQ).
+Our baseline STtrack model can be downloaded here: DLA-34: [[Google]](https://drive.google.com/open?id=1udpOPum8fJdoEQm6n0jsIgMMViOMFinu) [[Baidu, code: 88yn]](https://pan.baidu.com/s/1YQGulGblw_hrfvwiO6MIvA). HRNetV2_W18: [[Google]](https://drive.google.com/open?id=182EHCOSzVVopvAqAXN5o6XHX4PEyLjZT) [[Baidu, code: z4ft]](https://pan.baidu.com/s/1h1qwn8dyJmKj_nZi5H3NAQ).
 After downloading, you should put the baseline model in the following structure:
 ```
-${FAIRMOT_ROOT}
+${STtrack_ROOT}
    └——————models
            └——————all_dla34.pth
            └——————all_hrnet_v2_w18.pth
@@ -157,13 +157,4 @@ python demo.py mot --load_model ../models/all_hrnet_v2_w18.pth --arch hrnet_18 -
 ## Acknowledgement
 A large part of the code is borrowed from [Zhongdao/Towards-Realtime-MOT](https://github.com/Zhongdao/Towards-Realtime-MOT) and [xingyizhou/CenterNet](https://github.com/xingyizhou/CenterNet). Thanks for their wonderful works.
 
-## Citation
 
-```
-@article{zhang2020simple,
-  title={A Simple Baseline for Multi-Object Tracking},
-  author={Zhang, Yifu and Wang, Chunyu and Wang, Xinggang and Zeng, Wenjun and Liu, Wenyu},
-  journal={arXiv preprint arXiv:2004.01888},
-  year={2020}
-}
-```
