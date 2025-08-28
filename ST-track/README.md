@@ -12,7 +12,7 @@ Multiple object tracking in aerial images, particularly for maritime surveillanc
 |DeepSORT	|78.4	|88.4	|66.1	|82	|361	|27|
 |UAVMOT	|66.4|	85.1	|69.1|	606	|77|	52|
 |FairMOT	|76.5|	87.9|	68.1|	177|	304	|24|
-|ours	|84.6	|92.0|67.8|	83|	233	|31|
+|ours	|**84.6**	|92.0|67.8|	83|	233	|31|
 
 ### Table 2. Results on the Visdrone2019 test development dataset.
 |Method|	MOTA↑	|IDF1↑	|MOTP↑|	FN↓|	FM↓	|IDs↓|
