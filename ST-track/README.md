@@ -8,9 +8,9 @@ Multiple object tracking in aerial images, particularly for maritime surveillanc
 ### Table 1. Results on the development dataset.
 |Method|	MOTA↑|	IDF1↑|	MOTP↑	|FP↓|	FN↓	|FM↓|
 |-------|-------|-------|-------|-------|-------|-------|
-|SORT	|63.4	|83.8	|70.3|	645|	**105**|	38|
-|DeepSORT	|78.4	|88.4	|66.1	|82	|361	|**27**|
-|UAVMOT	|66.4|	85.1	|**69.1**|	606	|77|	52|
+|SORT	|63.4	|83.8	|**70.3**|	645|	105|	38|
+|DeepSORT	|78.4	|88.4	|66.1	|**82**	|361	|**27**|
+|UAVMOT	|66.4|	85.1	|69.1|	606	|**77**|	52|
 |FairMOT	|76.5|	87.9|	68.1|	177|	304	|24|
 |ours	|**84.6**	|**92.0**|67.8|	83|	233	|31|
 
